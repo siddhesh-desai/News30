@@ -27,7 +27,7 @@ class ScriptWriter:
 
     def write_headlines(self):
         self.script = self.write_script()
-        prompt = (f"News script: {self.script}", f"Given the script of video, your task is to generate four short headlines that comprehensively cover the main points of the news. The headlines should be impactful, concise, and engaging with an emoji. Separate the healines by a new line.")
+        prompt = (f"News script: {self.script}", f"Given the script of video, your task is to generate four short headlines that comprehensively cover the main points of the news. The headlines should be impactful, concise, and engaging with an emoji. Separate the healines by a new line. Don't include any bullets.")
         response = self._get_response(prompt)
         headlines_arr = response.split("\n")
         return headlines_arr

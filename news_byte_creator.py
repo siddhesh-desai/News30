@@ -20,6 +20,8 @@ class NewsByteCreator:
 
         writer = script_writer.ScriptWriter(self.news)
         self.headlines = writer.write_headlines()
+        filtered_list = [string for string in self.headlines if string != ""]
+        self.headlines = filtered_list
         self.script = writer.script
 
         print(self.headlines)
@@ -32,5 +34,15 @@ class NewsByteCreator:
 
 # theCreator = NewsByteCreator("https://www.bbc.com/news/articles/cgllgxlg5dgo")
 theCreator = NewsByteCreator(
-    "https://www.bbc.com/sport/tennis/articles/c722ez0r3pzo")
+    "https://www.bbc.com/future/article/20240522-the-drought-that-forced-a-himalayan-village-in-nepal-to-relocate")
+# theCreator = NewsByteCreator(
+#     "https://www.bbc.com/travel/article/20240513-ben-franklin-the-us-founding-father-who-travelled-the-globe")
+# theCreator = NewsByteCreator(
+#     "https://www.bbc.com/news/world-asia-india-67657873")
+# theCreator = NewsByteCreator(
+#     "https://www.bbc.com/travel/article/20240218-why-indias-wildly-remote-islands-are-trending")
+# theCreator = NewsByteCreator(
+#     "https://www.bbc.com/news/world-asia-india-68872429")
+# theCreator = NewsByteCreator(
+#     "https://www.bbc.com/sport/tennis/articles/c722ez0r3pzo")
 print(theCreator.create_byte())

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+      #loading {
+        width: 100px;
+        height: 100px;
+        background: url("/static/loading.gif") no-repeat center center;
+        background-size: contain;
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          window.location.href = "/result";
+        }, 100); // Short delay to show loading animation
+      });
+    </script>
+  </head>
+  <body>
+    <div id="loading"></div>
+  </body>
+</html>

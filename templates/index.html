@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../logos/news30_logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;700&display=swap"
+    />
+
+    <title>News30 | Generate Bytes</title>
+    <style>
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 50px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 20px 80px;
+        color: white;
+      }
+      .navbar-logo {
+        width: 1px;
+      }
+      .navbar-buttons {
+        display: flex;
+      }
+      .navbar-button {
+        margin-left: 35px;
+        padding: 15px 20px;
+        background-color: #040452;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .navbar-button:hover {
+        background-color: #000000;
+      }
+      .section {
+        display: flex;
+        height: 90vh;
+        background-color: #040452;
+        color: white;
+      }
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0px 80px;
+        justify-content: center;
+      }
+      .section-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section-image img {
+        max-width: 70%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="navbar-logo">
+        <img src="../static/news30_logo.png" alt="Logo" height="50px" />
+      </div>
+    </div>
+
+    <!-- Section -->
+    <div class="section">
+      <div class="section-content">
+        <h1>Insert Article Link</h1>
+        <form action="/" method="POST">
+          <label for="news_link">Enter News Article Link:</label>
+          <input type="text" id="news_link" name="news_link" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="section-image">
+        <!-- Image -->
+        <img src="../static/img1.png" alt="Image" />
+      </div>
+    </div>
+  </body>
+</html>
